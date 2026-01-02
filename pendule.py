@@ -18,7 +18,7 @@ st.write("Ajustez les paramètres dans la barre latérale et lancez l'animation.
 
 # --- Barre latérale pour les paramètres ---
 st.sidebar.header("Paramètres Physiques")
-g = st.sidebar.slider("Pesanteur (g) [m/s²]", min_value=0, max_value=25.0, value=9.81, step=0.1)
+g = st.sidebar.slider("Pesanteur (g) [m/s²]", min_value=0.0, max_value=25.0, value=9.81, step=0.1)
 l_cm = st.sidebar.slider("Longueur du pendule (L) [cm]", min_value=5.0, max_value=100.0, value=20.0, step=1.0)
 theta_deg = st.sidebar.slider("Angle initial [degrés]", min_value=5, max_value=90, value=30)
 
@@ -82,4 +82,5 @@ if st.sidebar.button("Lancer l'animation"):
 
 else:
     st.info("Modifiez les paramètres à gauche et cliquez sur 'Lancer l'animation'.")
+
 
