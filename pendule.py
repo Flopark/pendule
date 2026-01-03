@@ -11,7 +11,7 @@ import imageio
 import io
 
 # Configuration de la page
-st.set_page_config(page_title="Simulateur de Pendule Simple", layout="centered")
+st.set_page_config(page_title="⚖️ Simulateur de Pendule Simple", layout="centered")
 
 st.title("⚖️ Simulateur de Pendule Simple")
 st.write("Ajustez les paramètres dans la barre latérale et lancez l'animation.")
@@ -108,5 +108,6 @@ if st.sidebar.button("Lancer l'animation"):
     st.info(f"💡 La fréquence d'oscillation théorique est de **{frequence:.2f} Hz**.")
 else:
     st.info("Modifiez les paramètres à gauche et cliquez sur 'Lancer l'animation'.")
+
 
 
