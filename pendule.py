@@ -21,9 +21,19 @@ st.sidebar.header("Paramètres Physiques")
 
 # Choix de l'astre (Dictionnaire pour mapper le nom à la valeur de g)
 astres = {
-    "Terre (9.81 m/s²)": 9.81,
-    "Lune (1.62 m/s²)": 1.62,
-    "Soleil (274.0 m/s²)": 274.0
+    "Vide":0,
+    "Soleil": 274.0,
+    "Mercure": 3.7,
+    "Vénus": 8.87,
+    "Terre": 9.81,
+    "Lune": 1.62,
+    "Mars": 3.71,
+    "Jupiter": 24.79,
+    "Saturne": 10.44,
+    "Uranus": 8.69,
+    "Neptune": 11.15,
+    "Pluton": 0.62
+    
 }
 
 choix_astre = st.sidebar.selectbox("Choisissez la gravité :", list(astres.keys()))
@@ -97,3 +107,4 @@ if st.sidebar.button("Lancer l'animation"):
     st.info(f"💡 La période d'oscillation théorique est de **{periode:.2f} secondes**.")
 else:
     st.info("Modifiez les paramètres à gauche et cliquez sur 'Lancer l'animation'.")
+
