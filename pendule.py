@@ -38,10 +38,10 @@ astres = {
 choix_astre = st.sidebar.selectbox("Choisissez la gravité :", list(astres.keys()))
 g = astres[choix_astre]
 
-l_cm = st.sidebar.slider("Longueur du pendule (L) [cm]", min_value=1.0, max_value=100.0, value=20.0, step=1.0)
-theta_deg = st.sidebar.slider("Angle initial [degrés]", min_value=5, max_value=180, value=30)
+l_cm = st.sidebar.slider("Longueur du pendule (L) [cm]", min_value=5.0, max_value=100.0, value=20.0, step=1.0)
+theta_deg = st.sidebar.slider("Angle initial [degrés]", min_value=5, max_value=90, value=30)
 
-# Conversion des unités
+
 l_m = l_cm / 100
 w = np.sqrt(g / l_m)
 theta_max = np.radians(theta_deg)
@@ -108,6 +108,7 @@ if st.sidebar.button("Lancer l'animation"):
     st.info(f"💡 La fréquence d'oscillation théorique est de **{frequence:.2f} Hz**.")
 else:
     st.info("Modifiez les paramètres à gauche et cliquez sur 'Lancer l'animation'.")
+
 
 
 
